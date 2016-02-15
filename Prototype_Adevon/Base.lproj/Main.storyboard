@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oRp-RO-Ka9" userLabel="TopView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oRp-RO-Ka9" userLabel="TopView">
                                 <rect key="frame" x="0.0" y="28" width="768" height="611"/>
                                 <subviews>
                                     <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="EwO-Dj-tNh">
@@ -30,65 +30,65 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.95334996727748689" green="0.95334996727748689" blue="0.95334996727748689" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Azc-ed-pGG" userLabel="BottomView">
-                                <rect key="frame" x="-13" y="657" width="781" height="359"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Azc-ed-pGG" userLabel="BottomView">
+                                <rect key="frame" x="0.0" y="639" width="768" height="385"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJI-aX-coZ" userLabel="btn_love">
-                                        <rect key="frame" x="55" y="321" width="30" height="30"/>
+                                        <rect key="frame" x="55" y="347" width="30" height="30"/>
                                         <state key="normal" backgroundImage="love">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gof-Ge-Rr9" userLabel="btn_twitter">
-                                        <rect key="frame" x="93" y="321" width="30" height="30"/>
+                                        <rect key="frame" x="93" y="347" width="30" height="30"/>
                                         <state key="normal" backgroundImage="twitter">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JCI-Dg-XbX" userLabel="btn_email">
-                                        <rect key="frame" x="131" y="321" width="30" height="30"/>
+                                        <rect key="frame" x="131" y="347" width="30" height="30"/>
                                         <state key="normal" backgroundImage="email">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Signed Exhibition Prints" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fa1-Qw-9ZG">
-                                        <rect key="frame" x="55" y="194" width="217" height="23"/>
+                                        <rect key="frame" x="55" y="220" width="217" height="23"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                         <color key="textColor" red="0.23408867801047117" green="0.23408867801047117" blue="0.23408867801047117" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New York, October 2, 2015" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAu-rt-G8N" userLabel="New York, October 2, 2015">
-                                        <rect key="frame" x="55" y="125" width="273" height="23"/>
+                                        <rect key="frame" x="55" y="151" width="273" height="23"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="photography by rbfigueira," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iXO-8a-vJ7">
-                                        <rect key="frame" x="55" y="102" width="273" height="23"/>
+                                        <rect key="frame" x="55" y="128" width="273" height="23"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lisbon Downtown," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BtQ-X3-agx">
-                                        <rect key="frame" x="55" y="78" width="273" height="23"/>
+                                        <rect key="frame" x="55" y="104" width="273" height="23"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="30'' x 41''" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYp-dZ-6Sz">
-                                        <rect key="frame" x="55" y="219" width="217" height="23"/>
+                                        <rect key="frame" x="55" y="245" width="217" height="23"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                         <color key="textColor" red="0.23408867801047117" green="0.23408867801047117" blue="0.23408867801047117" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="More About Fine Art" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epz-w6-MmR">
-                                        <rect key="frame" x="55" y="267" width="217" height="23"/>
+                                        <rect key="frame" x="55" y="293" width="217" height="23"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                         <color key="textColor" red="0.48752454188481675" green="0.48752454188481675" blue="0.48752454188481675" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="highlightedColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PV9-Kx-CeU" userLabel="btn_press">
-                                        <rect key="frame" x="446" y="165" width="70" height="30"/>
+                                        <rect key="frame" x="446" y="191" width="70" height="30"/>
                                         <state key="normal" title="Press me"/>
                                         <connections>
                                             <action selector="pressButtonDidPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hf5-x8-PKW"/>
@@ -96,9 +96,21 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.96513007198952883" green="0.93690946979676715" blue="0.91165982099286458" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="385" identifier="bottomViewHeight" id="0EJ-5V-74J"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Azc-ed-pGG" firstAttribute="top" secondItem="oRp-RO-Ka9" secondAttribute="bottom" id="C3s-uB-aTH"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Azc-ed-pGG" secondAttribute="bottom" id="SZy-OG-qFA"/>
+                            <constraint firstItem="oRp-RO-Ka9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bTa-kZ-vki"/>
+                            <constraint firstItem="oRp-RO-Ka9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="msi-88-PcL"/>
+                            <constraint firstItem="Azc-ed-pGG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rdY-uP-W8O"/>
+                            <constraint firstItem="Azc-ed-pGG" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="toq-IE-TyC"/>
+                            <constraint firstItem="oRp-RO-Ka9" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="yLr-v6-UaP"/>
+                        </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="768" height="1024"/>
