@@ -28,7 +28,7 @@
                                         <rect key="frame" x="20" y="8" width="728" height="540"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.95334996727748689" green="0.95334996727748689" blue="0.95334996727748689" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.95334996727748689" green="0.95334996727748689" blue="0.4134888548951049" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Azc-ed-pGG" userLabel="BottomView">
                                 <rect key="frame" x="0.0" y="639" width="768" height="385"/>
@@ -115,7 +115,9 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="768" height="1024"/>
                     <connections>
+                        <outlet property="bottomView" destination="Azc-ed-pGG" id="1GV-z5-pRi"/>
                         <outlet property="emailButton" destination="JCI-Dg-XbX" id="2rp-4J-g4u"/>
+                        <outlet property="heightConstraint" destination="0EJ-5V-74J" id="ENV-sk-YhJ"/>
                         <outlet property="loveButton" destination="GJI-aX-coZ" id="eKZ-oi-z6Y"/>
                         <outlet property="pressButton" destination="PV9-Kx-CeU" id="Ii4-q9-phB"/>
                         <outlet property="topView" destination="oRp-RO-Ka9" id="Mjb-oV-kaA"/>

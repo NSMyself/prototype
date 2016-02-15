@@ -13,10 +13,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var twitterButton: UIButton!
     @IBOutlet weak var emailButton: UIButton!
     @IBOutlet weak var loveButton: UIButton!
-    @IBOutlet weak var topView: UIView!
     @IBOutlet weak var pressButton: UIButton!
-
+    
+    @IBOutlet weak var topView: UIView!
+    @IBOutlet weak var bottomView: UIView!
+    @IBOutlet weak var heightConstraint: NSLayoutConstraint!
+    
     let threshold:CGFloat = 5.0
+    let minHeight:CGFloat = 200
+    var lastTopViewFrame = CGRect.zero
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +30,12 @@ class ViewController: UIViewController {
         pan.maximumNumberOfTouches = 1
         pan.minimumNumberOfTouches = 1
         self.topView.addGestureRecognizer(pan)
+        
+        self.view.bringSubviewToFront(self.topView)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        self.lastTopViewFrame = self.topView.frame
     }
     
     //MARK: - Icon animation
@@ -62,30 +73,43 @@ class ViewController: UIViewController {
     //MARK: - Panning
     func pan(rec:UIPanGestureRecognizer) {
         
-        let p:CGPoint = rec.locationInView(self.view)
-        var center = CGPoint.zero
+        //heightConstraint.active = false
         
         switch rec.state {
-        case .Began:
-            print("began")
+            case .Began:
+                print("began")
             
-        case .Changed:
-                center = self.topView.center
-                let distance = sqrt(pow((center.x - p.x), 2.0) + pow((center.y - p.y), 2.0))
-                print("distance \(distance)")
+            case .Changed:
                 
-                if distance > threshold {
-                    self.topView.center.y = p.y// - (p.y % snapY)
-                }
-            
-        case .Ended:
-            print("ended")
-        case .Possible:
-            print("possible")
-        case .Cancelled:
-            print("cancelled")
-        case .Failed:
-            print("failed")
+                    let locationInView = rec.locationInView(self.view)
+
+                    let incrementalHeight = locationInView.y - self.lastTopViewFrame.maxY
+                    let resizedHeight = self.topView.frame.height + incrementalHeight
+                    /*print("incremental: \(incrementalHeight)")
+                    print("old Height: \(self.topView.frame.height)")
+                    print("new Height: \(resizedHeight)")*/
+
+
+                    if (resizedHeight <= 1200) {
+                        self.topView.frame = CGRect(x: self.topView.frame.origin.x, y: self.topView.frame.origin.y, width: self.topView.frame.width, height: resizedHeight)
+                        
+                        
+                        let bottomHeight = self.view.frame.height - resizedHeight
+                        
+                        self.bottomView.frame = CGRect(x: self.bottomView.frame.origin.x, y: self.view.frame.maxY - bottomHeight, width: self.bottomView.frame.width, height: bottomHeight)
+                        
+                        self.lastTopViewFrame = self.topView.frame
+                    }
+                    
+                
+            case .Ended:
+                print("ended")
+            case .Possible:
+                print("possible")
+            case .Cancelled:
+                print("cancelled")
+            case .Failed:
+                print("failed")
         }
     }
 }
