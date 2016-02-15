@@ -13,17 +13,21 @@ class ViewController: UIViewController {
     @IBOutlet weak var twitterButton: UIButton!
     @IBOutlet weak var emailButton: UIButton!
     @IBOutlet weak var loveButton: UIButton!
-    
+    @IBOutlet weak var topView: UIView!
     @IBOutlet weak var pressButton: UIButton!
 
-
+    let threshold:CGFloat = 5.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
-        }
+        let pan = UIPanGestureRecognizer(target:self, action:"pan:")
+        pan.maximumNumberOfTouches = 1
+        pan.minimumNumberOfTouches = 1
+        self.topView.addGestureRecognizer(pan)
+    }
     
-    
+    //MARK: - Icon animation
     @IBAction func pressButtonDidPress(sender: AnyObject) {
         twitterButton.transform = CGAffineTransformMakeTranslation(0, 50)
         emailButton.transform = CGAffineTransformMakeTranslation(0, 50)
@@ -48,8 +52,6 @@ class ViewController: UIViewController {
             self.emailButton.transform = CGAffineTransformMakeTranslation(0, 0)
             self.emailButton.alpha = 1
         })
-        
-
       }
 
     override func didReceiveMemoryWarning() {
@@ -57,7 +59,34 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-   
-
+    //MARK: - Panning
+    func pan(rec:UIPanGestureRecognizer) {
+        
+        let p:CGPoint = rec.locationInView(self.view)
+        var center = CGPoint.zero
+        
+        switch rec.state {
+        case .Began:
+            print("began")
+            
+        case .Changed:
+                center = self.topView.center
+                let distance = sqrt(pow((center.x - p.x), 2.0) + pow((center.y - p.y), 2.0))
+                print("distance \(distance)")
+                
+                if distance > threshold {
+                    self.topView.center.y = p.y// - (p.y % snapY)
+                }
+            
+        case .Ended:
+            print("ended")
+        case .Possible:
+            print("possible")
+        case .Cancelled:
+            print("cancelled")
+        case .Failed:
+            print("failed")
+        }
+    }
 }
 
